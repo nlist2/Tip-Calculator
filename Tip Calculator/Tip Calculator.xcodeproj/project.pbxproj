@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C958DAA249D5996003150CD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C958DA9249D5996003150CD /* MainViewController.swift */; };
 		EE45B492249D57CD002B76C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45B491249D57CD002B76C6 /* AppDelegate.swift */; };
 		EE45B494249D57CD002B76C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45B493249D57CD002B76C6 /* SceneDelegate.swift */; };
 		EE45B496249D57CD002B76C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45B495249D57CD002B76C6 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C958DA9249D5996003150CD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EE45B48E249D57CD002B76C6 /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE45B491249D57CD002B76C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE45B493249D57CD002B76C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				EE45B49A249D57D1002B76C6 /* Assets.xcassets */,
 				EE45B49C249D57D1002B76C6 /* LaunchScreen.storyboard */,
 				EE45B49F249D57D1002B76C6 /* Info.plist */,
+				1C958DA9249D5996003150CD /* MainViewController.swift */,
 			);
 			path = "Tip Calculator";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				EE45B496249D57CD002B76C6 /* ViewController.swift in Sources */,
 				EE45B492249D57CD002B76C6 /* AppDelegate.swift in Sources */,
 				EE45B494249D57CD002B76C6 /* SceneDelegate.swift in Sources */,
+				1C958DAA249D5996003150CD /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
