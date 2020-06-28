@@ -13,6 +13,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var Button10: UIButton!
     @IBOutlet weak var Button15: UIButton!
     @IBOutlet weak var Button20: UIButton!
+    @IBOutlet weak var MealCostField: UITextField!
+    @IBOutlet weak var TipPercentField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
