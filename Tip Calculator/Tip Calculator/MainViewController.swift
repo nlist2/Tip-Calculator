@@ -20,6 +20,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         var MealCost = MealCostField.text ?? ""
         var TipPercentage = TipPercentField.text ?? ""
+        // if meal cost is a string then return "please input number"
+        
+        // to-do
+        // configure UITextFields and save input as var
+        // solve the math
     }
     
 
