@@ -18,6 +18,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var MealCost = MealCostField.text ?? ""
+        var TipPercentage = TipPercentField.text ?? ""
     }
     
 
