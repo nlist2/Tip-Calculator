@@ -42,7 +42,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tel-n6-frx">
-                                <rect key="frame" x="158" y="526" width="102" height="49"/>
+                                <rect key="frame" x="156" y="549" width="102" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -121,7 +121,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHo-Hb-Rds">
-                                <rect key="frame" x="131" y="452" width="97" height="49"/>
+                                <rect key="frame" x="159" y="458" width="97" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -136,7 +136,9 @@
                         <outlet property="Button15" destination="0ff-zB-8fs" id="Cr1-rP-Wvo"/>
                         <outlet property="Button20" destination="tE8-yR-1dA" id="Mju-F4-6CD"/>
                         <outlet property="MealCostField" destination="khN-n5-yHr" id="TsB-Co-OAp"/>
+                        <outlet property="TipAmount" destination="QHo-Hb-Rds" id="CyD-fl-cgq"/>
                         <outlet property="TipPercentField" destination="jNl-uv-IOa" id="E7d-wX-i4a"/>
+                        <outlet property="TotalAmount" destination="tel-n6-frx" id="XrK-yL-p94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
