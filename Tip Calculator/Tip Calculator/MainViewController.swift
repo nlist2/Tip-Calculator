@@ -21,11 +21,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         var MealCost = MealCostField.text ?? ""
         var TipPercentage = TipPercentField.text ?? ""
         var TipAmountField = TipAmount.text ?? ""
         var TotalAmountField = TotalAmount.text ?? ""
-        
+        */
         
         // if meal cost is a string then return "please input number"
         
@@ -43,15 +44,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         // solve the math
     }
     
+    // if you click on the 20% button, if meal_cost and tip_percentage are filled out, total amount is filled in
+    @IBAction func getVal () {
+        let meal_cost: String = MealCostField.text ?? ""
+        let tip_percentage: String = TipPercentField.text ?? ""
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let multipliedNum: Double = Double(meal_cost)! * (1+Double(tip_percentage)!)
+        TotalAmount.text = String(multipliedNum)
     }
-    */
+    
 
 }
