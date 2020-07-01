@@ -49,9 +49,19 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let meal_cost: String = MealCostField.text ?? ""
         let tip_percentage: String = TipPercentField.text ?? ""
 
-        let multipliedNum: Double = Double(meal_cost)! * (1+Double(tip_percentage)!)
+        let multipliedNum: Double = Double(meal_cost)! * (1+(Double(tip_percentage)!/100))
         TotalAmount.text = String(multipliedNum)
     }
     
-
+    @IBAction func tenPercent () {
+        TipPercentField.text = "10"
+    }
+    
+    @IBAction func fifteenPercent () {
+        TipPercentField.text = "15"
+    }
+    
+     @IBAction func twentyPercent () {
+         TipPercentField.text = "20"
+     }
 }
