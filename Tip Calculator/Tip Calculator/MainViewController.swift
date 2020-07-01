@@ -17,31 +17,45 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var TipPercentField: UITextField!
     @IBOutlet weak var TipAmount: UILabel!
     @IBOutlet weak var TotalAmount: UILabel!
+    @IBOutlet weak var BottomLeftLabel: UILabel!
+    @IBOutlet weak var BottomRightLabel: UILabel!
+    @IBOutlet weak var TopLeftLabel: UILabel!
+    @IBOutlet weak var TopRightLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        var MealCost = MealCostField.text ?? ""
-        var TipPercentage = TipPercentField.text ?? ""
-        var TipAmountField = TipAmount.text ?? ""
-        var TotalAmountField = TotalAmount.text ?? ""
-        */
         
-        // if meal cost is a string then return "please input number"
+        TopLeftLabel.layer.borderWidth = 2.5
+        TopLeftLabel.layer.cornerRadius = 8
+        TopLeftLabel.layer.borderColor = UIColor.red.cgColor
+        TopLeftLabel.backgroundColor = UIColor.white
         
-        //I tried to make it work, but there were lots of errors about converting from a string to a double and back. This is what I was using \/ but it only worked with mystring and myfloat.
+        TopRightLabel.layer.borderWidth = 2.5
+        TopRightLabel.layer.cornerRadius = 8
+        TopRightLabel.layer.borderColor = UIColor.red.cgColor
+        TopRightLabel.backgroundColor = UIColor.white
         
-        let myString = "10"
+        BottomLeftLabel.layer.borderWidth = 2.5
+        BottomLeftLabel.layer.cornerRadius = 8
+        BottomLeftLabel.layer.borderColor = UIColor.red.cgColor
+        BottomLeftLabel.backgroundColor = UIColor.white
         
-        let myFloat = (myString as NSString).doubleValue
+        TipAmount.layer.borderWidth = 2.5
+        TipAmount.layer.cornerRadius = 8
+        TipAmount.layer.borderColor = UIColor.red.cgColor
+        TipAmount.backgroundColor = UIColor.white
         
-        let ooga = myFloat * myFloat
+        TotalAmount.layer.borderWidth = 2.5
+        TotalAmount.layer.cornerRadius = 8
+        TotalAmount.layer.borderColor = UIColor.red.cgColor
+        TotalAmount.backgroundColor = UIColor.white
         
-        TotalAmount.text = ooga.description
-        // to-do
-        // configure UITextFields and save input as var
-        // solve the math
+        BottomRightLabel.layer.borderWidth = 2.5
+        BottomRightLabel.layer.cornerRadius = 8
+        BottomRightLabel.layer.borderColor = UIColor.red.cgColor
+        BottomRightLabel.backgroundColor = UIColor.white
+  
     }
     
     // if you click on the 20% button, if meal_cost and tip_percentage are filled out, total amount is filled in
@@ -49,8 +63,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let meal_cost: String = MealCostField.text ?? ""
         let tip_percentage: String = TipPercentField.text ?? ""
 
-        let multipliedNum: Double = Double(meal_cost)! * (1+(Double(tip_percentage)!/100))
-        TotalAmount.text = String(multipliedNum)
+        let total_amount: Double = Double(meal_cost)! * (1+(Double(tip_percentage)!/100))
+        TotalAmount.text = "$" + String(total_amount)
+        
+        let tip_amount: Double = Double(meal_cost)! * (Double(tip_percentage)!/100)
+        TipAmount.text = "$" + String(tip_amount)
+        
     }
     
     @IBAction func tenPercent () {
