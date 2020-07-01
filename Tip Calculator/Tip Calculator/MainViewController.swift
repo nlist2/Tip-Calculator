@@ -31,10 +31,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         //I tried to make it work, but there were lots of errors about converting from a string to a double and back. This is what I was using \/ but it only worked with mystring and myfloat.
         
-        let myString = "556"
+        let myString = "10"
+        
         let myFloat = (myString as NSString).doubleValue
         
-        var ooga = myFloat * myFloat
+        let ooga = myFloat * myFloat
         
         TotalAmount.text = ooga.description
         // to-do
