@@ -22,9 +22,18 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var TopLeftLabel: UILabel!
     @IBOutlet weak var TopRightLabel: UILabel!
     
+
+    @IBOutlet weak var CalcButton: UIButton!
+    @IBOutlet weak var ClearButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Button10.layer.cornerRadius = 8
+        Button15.layer.cornerRadius = 8
+        Button20.layer.cornerRadius = 8
+        CalcButton.layer.cornerRadius = 8
+        ClearButton.layer.cornerRadius = 8
         
         TopLeftLabel.layer.borderWidth = 2.5
         TopLeftLabel.layer.cornerRadius = 8
@@ -55,14 +64,38 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         BottomRightLabel.layer.cornerRadius = 8
         BottomRightLabel.layer.borderColor = UIColor.red.cgColor
         BottomRightLabel.backgroundColor = UIColor.white
+        
+        TipPercentField.keyboardType = UIKeyboardType.decimalPad
+        TipPercentField.autocorrectionType = .no
+        TipPercentField.layer.cornerRadius = 8
+        TipPercentField.layer.borderWidth = 2.5
+        TipPercentField.layer.borderColor = UIColor.red.cgColor
+        
+        MealCostField.keyboardType = UIKeyboardType.decimalPad
+        MealCostField.autocorrectionType = .no
+        MealCostField.layer.cornerRadius = 8
+        MealCostField.layer.borderWidth = 2.5
+        MealCostField.layer.borderColor = UIColor.red.cgColor
+        
   
     }
     
     // if you click on the 20% button, if meal_cost and tip_percentage are filled out, total amount is filled in
+    
+    @IBAction func clearFields () {
+        MealCostField.text = ""
+        TipPercentField.text = ""
+        TotalAmount.text = ""
+        TipAmount.text = ""
+    }
+    
     @IBAction func getVal () {
+        // removes the keyboard from the screen
+        MealCostField.resignFirstResponder()
+        TipPercentField.resignFirstResponder()
+        
         let meal_cost: String = MealCostField.text ?? ""
         let tip_percentage: String = TipPercentField.text ?? ""
-
         let total_amount: Double = Double(meal_cost)! * (1+(Double(tip_percentage)!/100))
         TotalAmount.text = "$" + String(total_amount)
         

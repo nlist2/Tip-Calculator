@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		1C958DA9249D5996003150CD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		EE45B48E249D57CD002B76C6 /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE45B48E249D57CD002B76C6 /* BriskTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BriskTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE45B491249D57CD002B76C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE45B493249D57CD002B76C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EE45B495249D57CD002B76C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		EE45B48F249D57CD002B76C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE45B48E249D57CD002B76C6 /* Tip Calculator.app */,
+				EE45B48E249D57CD002B76C6 /* BriskTip.app */,
 				EE45B4A4249D57D1002B76C6 /* Tip CalculatorTests.xctest */,
 				EE45B4AF249D57D1002B76C6 /* Tip CalculatorUITests.xctest */,
 			);
@@ -148,7 +148,7 @@
 			);
 			name = "Tip Calculator";
 			productName = "Tip Calculator";
-			productReference = EE45B48E249D57CD002B76C6 /* Tip Calculator.app */;
+			productReference = EE45B48E249D57CD002B76C6 /* BriskTip.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EE45B4A3249D57D1002B76C6 /* Tip CalculatorTests */ = {
@@ -446,7 +446,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.noahlist.Tip-Calculator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BriskTip;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +464,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.noahlist.Tip-Calculator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BriskTip;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
