@@ -93,16 +93,17 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         // removes the keyboard from the screen
         MealCostField.resignFirstResponder()
         TipPercentField.resignFirstResponder()
-        
+            
         let meal_cost: String = MealCostField.text ?? ""
         let tip_percentage: String = TipPercentField.text ?? ""
         let total_amount: Double = Double(meal_cost)! * (1+(Double(tip_percentage)!/100))
-        TotalAmount.text = "$" + String(total_amount)
-        
+        TotalAmount.text = "$" + String(total_amount.rounded(toPlaces: 2))
+            
         let tip_amount: Double = Double(meal_cost)! * (Double(tip_percentage)!/100)
-        TipAmount.text = "$" + String(tip_amount)
+        TipAmount.text = "$" + String(tip_amount.rounded(toPlaces: 2))
         
     }
+    
     
     @IBAction func tenPercent () {
         TipPercentField.text = "10"
@@ -115,4 +116,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
      @IBAction func twentyPercent () {
          TipPercentField.text = "20"
      }
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
 }
