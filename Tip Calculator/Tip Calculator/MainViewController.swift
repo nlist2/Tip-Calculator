@@ -83,10 +83,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     // if you click on the 20% button, if meal_cost and tip_percentage are filled out, total amount is filled in
     
     @IBAction func clearFields () {
-        MealCostField.text = ""
-        TipPercentField.text = ""
-        TotalAmount.text = ""
-        TipAmount.text = ""
+        MealCostField.text = "0"
+        TipPercentField.text = "0"
+        TotalAmount.text = "$0.00"
+        TipAmount.text = "$0.00"
     }
     
     @IBAction func getVal () {
@@ -98,10 +98,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let tip_percentage: String = TipPercentField.text ?? ""
         let total_amount: Double = Double(meal_cost)! * (1+(Double(tip_percentage)!/100))
         TotalAmount.text = "$" + String(total_amount.rounded(toPlaces: 2))
-            
+        if(TotalAmount.text?.split(separator: ".")[1].count == 1){             TotalAmount.text = "$" + String(total_amount.rounded(toPlaces: 2)) + "0"         }
         let tip_amount: Double = Double(meal_cost)! * (Double(tip_percentage)!/100)
         TipAmount.text = "$" + String(tip_amount.rounded(toPlaces: 2))
-        
+        if(TipAmount.text?.split(separator: ".")[1].count == 1){             TipAmount.text = "$" + String(tip_amount.rounded(toPlaces: 2)) + "0"         }
     }
     
     
