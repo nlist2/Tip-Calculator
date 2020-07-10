@@ -93,6 +93,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         // removes the keyboard from the screen
         MealCostField.resignFirstResponder()
         TipPercentField.resignFirstResponder()
+        
+        if(MealCostField.text?.isNumberOrDouble == false || TipPercentField.text?.isNumberOrDouble == false){             MealCostField.text = "0"
+            TipPercentField.text = "0"
+            return
+            
+        }
             
         let meal_cost: String = MealCostField.text ?? ""
         let tip_percentage: String = TipPercentField.text ?? ""
@@ -125,3 +131,5 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
 }
+
+extension String  {     var isNumberOrDouble: Bool { return Int(self) != nil || Double(self) != nil } }
