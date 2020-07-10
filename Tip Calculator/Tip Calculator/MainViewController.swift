@@ -94,7 +94,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         MealCostField.resignFirstResponder()
         TipPercentField.resignFirstResponder()
         
-        if(MealCostField.text?.isNumberOrDouble == false || TipPercentField.text?.isNumberOrDouble == false){             MealCostField.text = "0"
+        if(MealCostField.text?.isNumberOrDouble == false || TipPercentField.text?.isNumberOrDouble == false){
+            MealCostField.text = "0"
             TipPercentField.text = "0"
             return
             
@@ -132,4 +133,6 @@ extension Double {
     }
 }
 
-extension String  {     var isNumberOrDouble: Bool { return Int(self) != nil || Double(self) != nil } }
+extension String  {
+    var isNumberOrDouble: Bool { return Int(self) != nil || Double(self) != nil }
+}
